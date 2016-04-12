@@ -7,48 +7,33 @@
     </h:head>
     <h:body>
         <img src="img/encabezado-unam.gif" />
-        <table border="0" width="7" cellspacing="3">
-            <thead>
-                <tr>
-                    <th></th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>
-                        <select name="Area">
-                            <option>Computo Cietifico</option>
-                            <option>Redes Computadora</option>
-                            <option>Ingenieria Software y Base Datos</option>
-                            <option>Inteligencia Artificial</option>
-                            <option>Imagenes y Ambientes Virtuales</option>
-                            <option>Teoria Computacion</option>
-                        </select>
-                    </td>
-                    <td>
-                        <select name="Opciones titulacion">
-                            <option>tesis</option>
-                            <option>Actividad al apoyo a la investigacion</option>
-                            <option>Actividad de Apoyo a la Docencia</option>
-                            <option>Actividad de Apoyp a la Divulgacion</option>
-                            <option>seminario Titulacion</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <textarea name="descripcion" rows="4" cols="20">
-                        </textarea>
-                         <input type="submit" value="aceptar" name="aeptar" />
-                        <input type="submit" value="rechazar" name="rechazar" />
-                    </td>
-                    
-                </tr>
-            </tbody>
-        </table>
+        <div>
+            <select name="Area">
+                <option>Computo Cietifico</option>
+                <option>Redes Computadora</option>
+                <option>Ingenieria Software y Base Datos</option>
+                <option>Inteligencia Artificial</option>
+                <option>Imagenes y Ambientes Virtuales</option>
+                <option>Teoria Computacion</option>
+            </select>
 
-      
+            <select name="Opciones titulacion">
+
+                <option>Actividad al apoyo a la investigacion</option>
+                <option>Actividad de Apoyo a la Docencia</option>
+                <option>Actividad de Apoyp a la Divulgacion</option>
+
+            </select>
+        </div>
+        <div>
+            <textarea name="descripcion" rows="20" cols="50">
+            </textarea>
+            <div>
+                <input type="submit" value="aceptar" name="aeptar" />
+                <input type="submit" value="rechazar" name="rechazar" />
+            </div>
+        </div>
+
 
     </h:body>
 </html>
