@@ -2,37 +2,34 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html">
+
     <h:head>
         <title>Facelet Title</title>
     </h:head>
     <h:body>
-        <img src="img/encabezado-unam.gif" />
-        <div>
-            <select name="Area">
-                <option>Computo Cietifico</option>
-                <option>Redes Computadora</option>
-                <option>Ingenieria Software y Base Datos</option>
-                <option>Inteligencia Artificial</option>
-                <option>Imagenes y Ambientes Virtuales</option>
-                <option>Teoria Computacion</option>
-            </select>
 
-            <select name="Opciones titulacion">
+        <h:form>
 
-                <option>Actividad al apoyo a la investigacion</option>
-                <option>Actividad de Apoyo a la Docencia</option>
-                <option>Actividad de Apoyp a la Divulgacion</option>
+            <h:panelGrid columns="2">
+                <img src="img/encabezado-unam.gif" />
+                <h:outputLabel value="opcion titulacion: "/>
+                <h:inputText value="#{publicaBean.profesorPublica.tipo}"/>
 
-            </select>
-        </div>
-        <div>
-            <textarea name="descripcion" rows="20" cols="50">
-            </textarea>
-            <div>
-                <input type="submit" value="aceptar" name="aeptar" />
-                <input type="submit" value="rechazar" name="rechazar" />
-            </div>
-        </div>
+                <h:outputLabel value="fecha inicio: "/>
+                <h:inputText value="#{publicaBean.profesorPublica.FFechadescripion}"/>
+
+                <h:outputLabel value="cupo: "/>
+                <h:inputText value="#{publicaBean.profesorPublica.ICupomaximo}"/>
+
+                <h:outputLabel value="descripcion: "/>
+                <h:inputText value="#{publicaBean.profesorPublica.SDescripciom}"/>
+            </h:panelGrid>
+
+            <h:commandButton actionListener="#{publicaBean.insertarPublicacion()}"
+                             value="publicar"/>
+
+
+        </h:form>
 
 
     </h:body>
