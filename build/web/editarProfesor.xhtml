@@ -5,42 +5,24 @@
     <h:head>
         <title>Facelet Title</title>
     </h:head>
-    <h:body>
-        
-        
-        <img src="img/encabezado-unam.gif" width="977" height="102" alt="encabezado-unam"/>
+    <h:body>     
+        <h:form>
+
+            <h:panelGrid columns="2">
+                <img src="img/encabezado-unam.gif" />
+                <h:outputLabel value="Nombre"/>
+                <h:inputText value="#{editarProfesorBean.profesor.SNombre}"/>
+
+                <h:outputLabel value="Correo:"/>
+                <h:inputText value="#{editarProfesorBean.profesor.Scorreo}"/>
+
+            </h:panelGrid>
+
+            <h:commandButton actionListener="#{editarProfesorBean.update()}"
+                             value="Actualizar"/>
 
 
-        
-        
-        <table border="2" width="2" cellspacing="4">
-            <thead>
-                <tr>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>
-                        <h1>nombre profesor:</h1>
-                    </td>
-                </tr>
-                
-                <tr>
-                    <td>
-                        <h1>correo:</h1>
-                        <input type="text" name="correo" value="correoProfesor" />
-                    </td>
-               </tr>
-                <tr>
-                    <td>
-                        <h1>descripcion</h1>
-                        <input type="text" name="descripcion" value="" />
-                        <input type="submit" value="ok" />
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        </h:form>
 
     </h:body>
 </html>
